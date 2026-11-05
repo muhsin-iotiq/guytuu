@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { MENU_PAGES } from "@/data/menu-pages";
+import { BOOK_PAGE_COUNT, MENU_PAGES } from "@/data/menu-pages";
 import { BookControls } from "./BookControls";
 import { FlipBook, type FlipBookHandle } from "./FlipBook";
 
@@ -57,6 +57,8 @@ export function MenuExperience() {
   }, [interactive]);
 
   const page = MENU_PAGES[pageIndex];
+  const atStart = pageIndex <= 0;
+  const atEnd = pageIndex >= BOOK_PAGE_COUNT - 1;
 
   return (
     <div className="menu-experience">
@@ -67,6 +69,27 @@ export function MenuExperience() {
         playIntro={!reducedMotion}
         onIndexChange={handleIndexChange}
       />
+
+      {interactive ? (
+        <>
+          <button
+            type="button"
+            className="flip-hit flip-hit--prev"
+            aria-label="Önceki sayfa"
+            disabled={atStart}
+            onPointerDown={(event) => event.stopPropagation()}
+            onClick={() => bookRef.current?.goPrev()}
+          />
+          <button
+            type="button"
+            className="flip-hit flip-hit--next"
+            aria-label="Sonraki sayfa"
+            disabled={atEnd}
+            onPointerDown={(event) => event.stopPropagation()}
+            onClick={() => bookRef.current?.goNext()}
+          />
+        </>
+      ) : null}
 
       <BookControls
         visible={controlsVisible}

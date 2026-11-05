@@ -63,6 +63,33 @@ body {
   pointer-events: none;
 }
 
+.flip-hit {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: min(28vw, 120px);
+  height: auto;
+  bottom: 5.75rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flip-hit--prev {
+  left: 0;
+}
+
+.flip-hit--next {
+  right: 0;
+}
+
+.flip-hit:disabled {
+  pointer-events: none;
+}
+
 .flip-book.stf__parent {
   width: 100% !important;
   height: 100% !important;

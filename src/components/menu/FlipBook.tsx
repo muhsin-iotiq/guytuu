@@ -34,8 +34,8 @@ export const FlipBook = forwardRef<FlipBookHandle, FlipBookProps>(
     onIndexChangeRef.current = onIndexChange;
 
     useImperativeHandle(ref, () => ({
-      goNext: () => pageFlipRef.current?.flipNext("bottom"),
-      goPrev: () => pageFlipRef.current?.flipPrev("bottom"),
+      goNext: () => pageFlipRef.current?.flipNext("top"),
+      goPrev: () => pageFlipRef.current?.flipPrev("top"),
     }));
 
     useEffect(() => {
@@ -73,7 +73,7 @@ export const FlipBook = forwardRef<FlipBookHandle, FlipBookProps>(
           mobileScrollSupport: false,
           autoSize: false,
           maxShadowOpacity: 0.45,
-          swipeDistance: 25,
+          swipeDistance: 8,
           useMouseEvents: true,
           disableFlipByClick: false,
         });

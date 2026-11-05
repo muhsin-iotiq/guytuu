@@ -8,11 +8,6 @@ import {
 } from "react";
 import type { PageFlip, PageFlipEvent } from "page-flip/dist/js/page-flip.module.js";
 import { MENU_PAGES } from "@/data/menu-pages";
-import {
-  bindPageTurnSoundUnlock,
-  getTurnDirection,
-  playPageTurnSound,
-} from "@/lib/page-turn-sound";
 import { MenuPageView } from "./MenuPageView";
 
 export type FlipBookHandle = {
@@ -36,9 +31,7 @@ export const FlipBook = forwardRef<FlipBookHandle, FlipBookProps>(
     const bookRef = useRef<HTMLDivElement>(null);
     const pageFlipRef = useRef<PageFlip | null>(null);
     const onIndexChangeRef = useRef(onIndexChange);
-    const reducedMotionRef = useRef(reducedMotion);
     onIndexChangeRef.current = onIndexChange;
-    reducedMotionRef.current = reducedMotion;
 
     useImperativeHandle(ref, () => ({
       goNext: () => pageFlipRef.current?.flipNext("bottom"),
@@ -91,16 +84,6 @@ export const FlipBook = forwardRef<FlipBookHandle, FlipBookProps>(
           onIndexChangeRef.current(Number(event.data));
         });
 
-        const engine = pageFlip;
-        pageFlip.on("changeState", (event: PageFlipEvent) => {
-          if (cancelled) return;
-          if (event.data !== "flipping" && event.data !== "user_fold") return;
-          playPageTurnSound(
-            getTurnDirection(engine),
-            reducedMotionRef.current ? 420 : 820,
-          );
-        });
-
         pageFlip.on("init", () => {
           if (!cancelled && pageFlip) {
             onIndexChangeRef.current(pageFlip.getCurrentPageIndex());
@@ -118,10 +101,6 @@ export const FlipBook = forwardRef<FlipBookHandle, FlipBookProps>(
         pageFlipRef.current = null;
       };
     }, [reducedMotion]);
-
-    useEffect(() => {
-      bindPageTurnSoundUnlock();
-    }, []);
 
     return (
       <div

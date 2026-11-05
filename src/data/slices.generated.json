@@ -1,0 +1,121 @@
+{
+  "slices": {
+    "mercimek-title": {
+      "src": "/assets/slices/mercimek-title.jpg",
+      "w": 340,
+      "h": 300
+    },
+    "mercimek-bowl": {
+      "src": "/assets/slices/mercimek-bowl.jpg",
+      "w": 608,
+      "h": 425
+    },
+    "pilav-et-title": {
+      "src": "/assets/slices/pilav-et-title.jpg",
+      "w": 283,
+      "h": 192
+    },
+    "pilav-et-plate": {
+      "src": "/assets/slices/pilav-et-plate.jpg",
+      "w": 615,
+      "h": 258
+    },
+    "pilav-tavuk-title": {
+      "src": "/assets/slices/pilav-tavuk-title.jpg",
+      "w": 323,
+      "h": 192
+    },
+    "pilav-tavuk-plate": {
+      "src": "/assets/slices/pilav-tavuk-plate.jpg",
+      "w": 620,
+      "h": 266
+    },
+    "guytu-col-1": {
+      "src": "/assets/slices/guytu-col-1.jpg",
+      "w": 326,
+      "h": 540
+    },
+    "guytu-col-2": {
+      "src": "/assets/slices/guytu-col-2.jpg",
+      "w": 330,
+      "h": 540
+    },
+    "guytu-col-3": {
+      "src": "/assets/slices/guytu-col-3.jpg",
+      "w": 334,
+      "h": 540
+    },
+    "kayik-badge": {
+      "src": "/assets/slices/kayik-badge.jpg",
+      "w": 394,
+      "h": 100
+    },
+    "kayik-kori": {
+      "src": "/assets/slices/kayik-kori.jpg",
+      "w": 480,
+      "h": 213
+    },
+    "kayik-barbeku": {
+      "src": "/assets/slices/kayik-barbeku.jpg",
+      "w": 490,
+      "h": 213
+    },
+    "kayik-chili": {
+      "src": "/assets/slices/kayik-chili.jpg",
+      "w": 480,
+      "h": 222
+    },
+    "kayik-mantar": {
+      "src": "/assets/slices/kayik-mantar.jpg",
+      "w": 490,
+      "h": 226
+    },
+    "icecek-title": {
+      "src": "/assets/slices/icecek-title.jpg",
+      "w": 784,
+      "h": 185
+    },
+    "wave": {
+      "src": "/assets/slices/wave.jpg",
+      "w": 1024,
+      "h": 104
+    }
+  },
+  "logo": {
+    "src": "/assets/logo-mark.png",
+    "w": 590,
+    "h": 358
+  },
+  "posters": {
+    "mercimek": {
+      "poster": "/assets/menu-mercimek-corbasi.jpg",
+      "edgeLeft": "/assets/paper/mercimek-l.jpg",
+      "edgeRight": "/assets/paper/mercimek-r.jpg",
+      "paper": "/assets/paper/mercimek-paper.jpg"
+    },
+    "pilav": {
+      "poster": "/assets/menu-pilav-ustu-doner.jpg",
+      "edgeLeft": "/assets/paper/pilav-l.jpg",
+      "edgeRight": "/assets/paper/pilav-r.jpg",
+      "paper": "/assets/paper/pilav-paper.jpg"
+    },
+    "guytu": {
+      "poster": "/assets/menu-guytu.jpg",
+      "edgeLeft": "/assets/paper/guytu-l.jpg",
+      "edgeRight": "/assets/paper/guytu-r.jpg",
+      "paper": "/assets/paper/guytu-paper.jpg"
+    },
+    "kayik": {
+      "poster": "/assets/menu-guytu-kayik-yakinda.jpg",
+      "edgeLeft": "/assets/paper/kayik-l.jpg",
+      "edgeRight": "/assets/paper/kayik-r.jpg",
+      "paper": "/assets/paper/kayik-paper.jpg"
+    },
+    "icecek": {
+      "poster": "/assets/menu-icecek.jpg",
+      "edgeLeft": "/assets/paper/icecek-l.jpg",
+      "edgeRight": "/assets/paper/icecek-r.jpg",
+      "paper": "/assets/paper/icecek-paper.jpg"
+    }
+  }
+}
